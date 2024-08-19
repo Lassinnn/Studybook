@@ -8,58 +8,102 @@
       smaller screen sizes like a phone or a tablet). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!---->
-    <!-- Load a font called Roboto from Google Fonts. -->
+    <!-- Load a font called Roboto from Google Fonts. Uncomment these if you need the font. -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
 
-    <!-- Here are the CSS files for this page. -->
+    <!-- Link to external CSS files for shared and page-specific styles -->
     <link rel="stylesheet" href="styles/shared/general.css">
     <link rel="stylesheet" href="styles/shared/header.css">
     <link rel="stylesheet" href="styles/pages/index.css">
   </head>
   <body>
+    <!-- Header section containing the logo and navigation buttons -->
     <div class="header">
+      <!-- Left section of the header, contains the logos -->
       <div class="header-left-section">
+        <!-- Link to home page -->
         <a href="index.html" class="header-link">
-          <img class="studybook-logo"
-            src="images/studybook logo.png">
-          <img class="amazon-mobile-logo"
-            src="images/amazon-mobile-logo-white.png">
+          <!-- StudyBook logo -->
+          <img class="studybook-logo" src="images/studybook logo.png">
+          <!-- Mobile-specific logo, can be uncommented if needed -->
+          <!-- <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png"> -->
         </a>
+        <button>Students</button>
+        <button>Staff</button>
       </div>
 
+      <!-- Middle section of the header, can be used for search or other buttons -->
       <div class="header-middle-section">
         <button>Button</button>
       </div>
 
+      <!-- Right section of the header, usually for user account or additional options -->
       <div class="header-right-section">
         <button>Button</button>
       </div>
     </div>
 
+    <!-- Main content area -->
     <div class="main">
+      <!-- Grid layout for organizing blocks of content -->
       <div class="blocks-grid js-products-grid">
+        
+        <!-- Left block, contains schedule and class personnel -->
         <div class="block-left">
+          <!-- Schedule section with different periods and subjects -->
           <div class="schedule">
             <div class="schedule-period1">
+              <!-- Image and subject name for period 1 -->
               <img class="test-image" src="images/studybook logo.jpg">
               <div>Math</div>
+              <div>8:00-8:45</div>
             </div>
-            <div class="schedule-period2">Finnish</div>
-            <div class="schedule-period3">English</div>
-            <div class="schedule-period4">Physical Education</div>
-            <div class="schedule-period5">Physical Education</div>
-            <div class="schedule-period6">Music</div>
+            <!-- Additional periods -->
+            <div class="schedule-period2">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>Finnish</div>
+              <div>8:45-9:30</div>
+            </div>
+            <div class="schedule-period3">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>English</div>
+              <div>10:00-10:45</div>
+            </div>
+            <div class="schedule-period4">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>Music</div>
+              <div>11:05-11:50</div>
+            </div>
+            <div class="schedule-period5">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>Physical Education</div>
+              <div>12:15-13:00</div>
+            </div>
+            <div class="schedule-period6">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>Physical Education</div>
+              <div>13:15-14:00</div>
+            </div>
+            <div class="schedule-period6">
+              <img class="test-image" src="images/studybook logo.jpg">
+              <div>Physical Education</div>
+              <div>14:00-14:45</div>
+            </div>
           </div>
+
+          <!-- Class personnel section -->
           <div class="class-personnel js-class-personnel">
+            <!-- Teacher information -->
             <div class="teacher-row">
               <div class="teacher">teacher</div>
-              
             </div>
+            
+            <!-- Row 1 of students -->
             <div class="row1">
               <div class="column1"> 
+                <!-- Student image and name -->
                 <img class="student-image" src="images/student-M.png"> 
                 <div class="student-name">John</div>
               </div>
@@ -80,6 +124,8 @@
                 <div class="student-name">student5</div>
               </div>
             </div>
+            
+            <!-- Additional rows of students -->
             <div class="row2">
               <div class="column1"> 
                 <img class="student-image" src="images/student-M.png"> 
@@ -149,21 +195,37 @@
           </div>
         </div>
 
+        <!-- Center block, usually for the main feed or content -->
         <div class="block-center">
+          <!-- Placeholder for the main feed content -->
           <div>this is going to be the feed</div>
           <div class="feed-post">
+            <!-- Image and contents of the post -->
             <img class="feed-image" src="images/studybook logo.jpg">
             <div class="post-contents">
               <div class="post-text">
                 Hello world! This is the first post that I, the teacher, have posted on this classroom.
               </div>
+              <div class="post-impressions">
+                <div class="post-comments">
+                  <img class="post-impression-icon" src="images/comment.png">
+                  <div>5</div>
+                </div>
+                <div class="post-seen">
+                  <img class="post-impression-icon" src="images/seen.png">
+                  <div>20</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Right block, containing homework and tests sections -->
         <div class="block-right">
+          <!-- Homework section -->
           <div class="homework">
             this here is homerwork
+            <!-- Homework for different subjects -->
             <div class="homework-subject1">
               <img class="homework-image" src="images/studybook logo.png">
               <div>Math</div>
@@ -177,8 +239,11 @@
               <div>English</div>
             </div>
           </div>
+          
+          <!-- Tests section -->
           <div class="tests">
             this here is tests
+            <!-- Tests for different subjects -->
             <div class="test-subject1">
               <img class="test-image" src="images/studybook logo.png">
               <div>Math</div>
@@ -190,11 +255,13 @@
             <div class="test-subject3">
               <img class="test-image" src="images/studybook logo.png">
               <div>English</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Link to the external JavaScript file for page-specific scripts -->
     <script type="module" src="scripts/index.js"></script>
   </body>
 </html>

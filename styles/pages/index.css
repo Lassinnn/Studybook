@@ -1,182 +1,207 @@
+/* Flexbox container for the main blocks layout */
 .blocks-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 30px;
-  padding-top: 30px;
+  display: flex; 
+  flex-direction: row;
+  column-gap: 30px; 
+  padding-top: 30px; 
 }
 
+/* Styles for the left and right blocks */
 .block-right,
 .block-left {
-  border: solid;
-  border-radius: 10px;
-  border-color: red;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex: 1;
-  row-gap: 30px;
-  /*height: 900px;*/
+  border: solid 1px red; 
+  border-radius: 10px; 
+  margin-top: 50px; 
+  display: flex; /* Flexbox layout for internal elements */
+  flex-direction: column; 
+  flex: 1; 
+  row-gap: 30px; 
+  justify-content: space-between;
 }
 
+/* Styles for the center block */
 .block-center {
-  border: solid;
-  border-radius: 10px;
-  border-color: red;
-  margin-top: 50px;
-  /*display: inline-block;*/
-  background-color: rgb(118, 146, 255);
-}
-
-.class-personnel{
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  display: block;
-  row-gap: 30px;
-  background-color: rgb(118, 146, 255);
-}
-
-.schedule {
-  height: 400px;
-  display: flex;
-  background-color: rgb(118, 146, 255);
-  flex-direction: column;
-  justify-content: stretch;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-}
-
-.homework,
-.tests {
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  display: flex;
-  flex-direction: column;
+  border: solid 1px red; 
+  border-radius: 10px; 
+  margin-top: 50px; 
+  background-color: rgb(118, 146, 255); /* Light blue background color */
   flex: 1;
-  row-gap: 30px;
-  background-color: rgb(118, 146, 255);
 }
 
-.column1,
-.column2,
-.column3,
-.column4,
-.column5 {
-  display: flex;
-  flex-direction: column;
-  border: solid;
-  border-radius: 10px;
-  border-color: red;
-  height: 100px;
-  width: 100px;
-  row-gap: 10px;
-  column-gap: 10px;
+/* Styles for the class personnel section */
+.class-personnel {
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  background-color: rgb(118, 146, 255); 
+  row-gap: 30px; 
 }
 
-.row1,
-.row2,
-.row3,
-.row4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 10px;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
+/* Styles for the schedule section */
+.schedule { 
+  display: flex; 
+  flex-direction: column; 
+  background-color: rgb(118, 146, 255); 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  row-gap: 5px;
 }
 
-.teacher-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  margin: auto;
-}
-
-.teacher {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  margin: auto;
-  height: 100px;
-  width: 100px;
-}
-
-
+/* Styles for the periods on the schedule */
 .schedule-period1,
 .schedule-period2,
 .schedule-period3,
 .schedule-period4,
 .schedule-period5,
 .schedule-period6 {
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Styles for the homework and tests sections */
+.homework,
+.tests {
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  flex: 1; 
+  row-gap: 30px; 
+  background-color: rgb(118, 146, 255); 
+}
+
+/* Styles for the columns inside each row */
+.column1,
+.column2,
+.column3,
+.column4,
+.column5 {
+  display: flex; 
+  flex-direction: column; 
+  border: solid 1px red; 
+  border-radius: 10px; 
+  height: 100px; 
+  width: 100px; 
+}
+
+/* Styles for the rows containing the columns */
+.row1,
+.row2,
+.row3,
+.row4 {
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); /* Five equal-width columns */
+  row-gap: 10px; 
+  column-gap: 10px; 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+}
+
+/* Styles for the teacher row */
+.teacher-row {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  margin: auto; 
+}
+
+/* Styles for the teacher container */
+.teacher {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  margin: auto; 
+  height: 100px; 
+  width: 100px; 
+}
+
+/* Styles for the schedule periods */
+.schedule-period1,
+.schedule-period2,
+.schedule-period3,
+.schedule-period4,
+.schedule-period5,
+.schedule-period6 {
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  height: 100%; 
+}
+
+/* Styles for the student images */
 .student-image {
-  width: 100%;
+  width: 100%; 
 }
 
+/* Styles for the student names */
 .student-name {
-  position:relative;
-  top: -100%;
+  position: relative; 
+  top: -100%; /* Positioning the name above the image */
 }
 
-.homework-image {
-  width: 50px;
-}
-
-.test-image {
-  width: 50px;
-}
-
+/* Styles for the homework, test, and feed images */
+.homework-image,
+.test-image,
 .feed-image {
-  width: 50px;
-  margin-right: 5px;
-  margin-left: 5px;
-  border: solid;
-  border-radius: 50px;
-  border-width: 2px;
+  width: 50px; 
+  height: 50px;
 }
 
+/* Additional styles for the feed image */
+.feed-image {
+  margin-right: 5px; 
+  margin-left: 5px; 
+  border: solid 2px; 
+  border-radius: 50px; /* Circular shape */
+}
+
+/* Styles for the homework and test subjects */
 .homework-subject1,
 .homework-subject2,
-.homework-subject3 {
-  display: flex;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  justify-content: start;
-}
-
+.homework-subject3,
 .test-subject1,
 .test-subject2,
 .test-subject3 {
-  display: flex;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  justify-content: start;
+  display: flex; 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  justify-content: start; 
 }
 
+/* Styles for the feed posts */
 .feed-post {
+  display: flex; 
+  flex-direction: row; 
+  flex: 1; 
+  border: solid 1px blue; 
+  border-radius: 10px; 
+  padding: 5px 0; 
+  min-height: 80px;
+  align-items: center;
+}
+
+.post-impressions {
   display: flex;
   flex-direction: row;
-  flex: 1;
-  border: solid;
-  border-radius: 10px;
-  border-color: blue;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  justify-content: end;
+  position: relative;
+  bottom: -10px;
+}
+
+.post-impression-icon {
+  width: 15px;
+}
+
+.post-seen,
+.post-comments {
+  display: flex;
+  margin-right: 20px;
+}
+
+.post-comments {
+  margin-left: 20px;
 }

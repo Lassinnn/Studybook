@@ -30,5 +30,15 @@ button {
 }
 
 .studybook-logo {
-  width: 50px;
+  /*TODO: why logo not center align*/
+  height: 50px;
+  margin-right: 10px;
+  align-items: center;
+  flex: 1;
+}
+
+.header-left-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
